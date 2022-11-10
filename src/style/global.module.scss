@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+body {
+    background-color: $grey-200 !important;
+}
+.logoImage {
+    width: 40px;
+}
+.logoText {
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.textInput {
+    background-color: rebeccapurple;
+}
