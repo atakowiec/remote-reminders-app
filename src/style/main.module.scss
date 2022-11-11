@@ -96,6 +96,7 @@
   background-color: $white;
   padding: 20px;
   border-radius: 50px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   .title {
     font-weight: 300;
   }
@@ -106,17 +107,37 @@
 }
 
 .remindersBox {
-  padding: 20px 40px;
+  padding: 40px;
 
   .header {
     display: flex;
   }
 
-  @media(min-width: 768px) {
-    padding: 40px 100px;
+  @media(min-width: 576px) {
+    padding: 40px 50px;
 
     .subtitle {
       font-size: 1.5rem;
+    }
+  }
+
+  @media(min-width: 1400px) {
+    padding: 40px 100px;
+  }
+
+  .remindersList {
+    padding-top: 20px;
+  }
+
+  .reminder {
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    //background-color: #4949C8;
+    font-weight: 300;
+
+    p {
+      margin-bottom: 0;
     }
   }
 }
@@ -125,4 +146,29 @@
   .title {
     margin-top: 20px;
   }
+}
+
+.reminderColor1 {
+  //background-color: #F4BFBF;
+  background-color: #4949C8;
+}
+
+.reminderColor2 {
+  background-color: #C98474;
+}
+
+.reminderColor3 {
+  background-color: #354259;
+}
+
+.reminderColor4 {
+  background-color: #A97155;
+}
+
+.reminderColor5 {
+  background-color: #54BAB9;
+}
+
+.reminderColor6 {
+  background-color: #EEC373;
 }

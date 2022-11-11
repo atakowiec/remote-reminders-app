@@ -2,21 +2,24 @@ import styles from '../../style/login.module.scss';
 import Logo from "../global/Logo";
 import {Link} from "react-router-dom";
 import {motion} from "framer-motion";
+import {useEffect} from "react";
 
 export default function Login() {
-
+    useEffect(() => {
+        document.title = "Login - RemoteRemindersApp"
+    }, [])
     return (
         <motion.div className={`${styles.body}`}
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
         >
-            <div className={`col-11 col-sm-7 col-md-5 col-xxl-3`}>
+            <div className={`col-11 col-sm-7 col-md-5 col-lg-4 col-xxl-3`}>
                 <Logo className={styles.logo}/>
                 <form className={`${styles.content}`} onSubmit={event => event.preventDefault()}>
                     <h1>Login to your account</h1>
-                    <input className={"col-8 col-md-6 " + styles.textInput} placeholder="email"/>
-                    <input className={"col-8 col-md-6 " + styles.textInput} placeholder="password" type="password"/>
+                    <input className={"col-8 col-md-7 " + styles.textInput} placeholder="email"/>
+                    <input className={"col-8 col-md-7 " + styles.textInput} placeholder="password" type="password"/>
                     <Link className={styles.recoveryLink} to={"/password-recovery"}>
                         I forgot my password
                     </Link>
