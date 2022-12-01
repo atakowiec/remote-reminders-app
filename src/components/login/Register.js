@@ -77,16 +77,13 @@ export default function Register() {
             return
         }
         try {
-            const response = await axios.post(
-                "/register",
-                JSON.stringify({ user: nameRef.current.value, pwd: passRef.current.value }),
+            const response = await axios.post("/register",
+                JSON.stringify({ username: nameRef.current.value, password: passRef.current.value }),
                 {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    withCredentials: true
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: false
                 }
-            )
+            );
             console.log(response.data);
             console.log(response.accessToken);
 
